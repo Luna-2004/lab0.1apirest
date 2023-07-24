@@ -1,5 +1,9 @@
+using APIRest01.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.ConfigureCors();
+builder.Services.ConfigureIISIntegration();
 // Add services to the container.
 
 builder.Services.AddControllers();
